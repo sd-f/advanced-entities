@@ -29,25 +29,25 @@ const plugins = [
     exclude: 'node_modules/**',
     babelHelpers: 'bundled',
   }),
-  getBabelOutputPlugin({
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          targets: {
-            browsers: ['last 2 versions', 'Android >= 5', 'Chrome >= 60', 'Firefox ESR', 'Safari >= 9'],
-          },
-          modules: false,
-        },
-      ],
-    ],
-  }),
+  // getBabelOutputPlugin({
+  //   presets: [
+  //     [
+  //       '@babel/preset-env',
+  //       {
+  //         targets: {
+  //           browsers: ['last 2 versions', 'Android >= 5', 'Chrome >= 60', 'Firefox ESR', 'Safari >= 9'],
+  //         },
+  //         modules: false,
+  //       },
+  //     ],
+  //   ],
+  // }),
   dev && serve(serveopts),
-  !dev &&
-    terser({
-      compress: true,
-      mangle: true,
-    }),
+  // !dev &&
+  //   terser({
+  //     compress: true,
+  //     mangle: true,
+  //   }),
 ];
 
 export default [
@@ -56,7 +56,7 @@ export default [
     output: {
       dir: './dist',
       format: 'es',
-      sourcemap: dev ? true : false,
+      sourcemap: true,
     },
     plugins: [...plugins],
     watch: {
