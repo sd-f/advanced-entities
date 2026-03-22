@@ -481,7 +481,8 @@ const styles = i$5 `
   }
   .entities-row {
     flex-direction: row;
-    display: inline-flex;
+    display: flex;
+    flex: 1;
     justify-content: flex-end;
     align-items: center;
   }
@@ -494,6 +495,7 @@ const styles = i$5 `
   .entities-column {
     flex-direction: column;
     display: flex;
+    flex: 1;
     align-items: flex-end;
     justify-content: space-evenly;
   }

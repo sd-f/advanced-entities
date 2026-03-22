@@ -18,7 +18,8 @@ export const styles = css`
   }
   .entities-row {
     flex-direction: row;
-    display: inline-flex;
+    display: flex;
+    flex: 1;
     justify-content: flex-end;
     align-items: center;
   }
@@ -31,6 +32,7 @@ export const styles = css`
   .entities-column {
     flex-direction: column;
     display: flex;
+    flex: 1;
     align-items: flex-end;
     justify-content: space-evenly;
   }
