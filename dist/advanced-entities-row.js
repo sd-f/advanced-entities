@@ -2275,8 +2275,10 @@ let AdvancedEntitiesRow = class AdvancedEntitiesRow extends i$2 {
         if (subConfigState === null || subConfigState === void 0 ? void 0 : subConfigState.name) {
             entityNameStr = getTemplateOrValue(ctx, stateObj, subConfigState.name);
         }
-        // Resolve icon from state config
-        let entityIcon = config.icon;
+        // Resolve icon from config template, then state config override
+        let entityIcon = config.icon !== undefined
+            ? getTemplateOrValue(ctx, stateObj, config.icon)
+            : undefined;
         if (subConfigState === null || subConfigState === void 0 ? void 0 : subConfigState.icon) {
             entityIcon = getTemplateOrValue(ctx, stateObj, subConfigState.icon);
         }

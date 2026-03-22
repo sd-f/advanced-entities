@@ -422,8 +422,10 @@ class AdvancedEntitiesRow extends LitElement {
       entityNameStr = getTemplateOrValue(ctx, stateObj, subConfigState.name);
     }
 
-    // Resolve icon from state config
-    let entityIcon = config.icon;
+    // Resolve icon from config template, then state config override
+    let entityIcon = config.icon !== undefined
+      ? getTemplateOrValue(ctx, stateObj, config.icon)
+      : undefined;
     if (subConfigState?.icon) {
       entityIcon = getTemplateOrValue(ctx, stateObj, subConfigState.icon);
     }
