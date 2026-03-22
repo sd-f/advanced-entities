@@ -465,8 +465,12 @@ const forwardHaptic = (node, hapticType) => {
 
 const styles = i$5 `
   :host {
+    display: block;
+    width: 100%;
+  }
+  hui-generic-entity-row {
     display: flex;
-    align-items: center;
+    width: 100%;
   }
   .icon-small {
     width: auto;

@@ -2,8 +2,12 @@ import { css } from 'lit';
 
 export const styles = css`
   :host {
+    display: block;
+    width: 100%;
+  }
+  hui-generic-entity-row {
     display: flex;
-    align-items: center;
+    width: 100%;
   }
   .icon-small {
     width: auto;
