@@ -2,4 +2,3 @@
 *.iml
 archive/
 node_modules/
-dist/
