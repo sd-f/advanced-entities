@@ -1,0 +1,40 @@
+{
+  "name": "advanced-entities",
+  "version": "1.0.0",
+  "description": "Advanced entities row for Home Assistant Lovelace with template support",
+  "main": "dist/advanced-entities.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c --watch"
+  },
+  "keywords": [
+    "lovelace",
+    "home-assistant",
+    "hacs"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.28.5",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-commonjs": "^28.0.9",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.52.5",
+    "rollup-plugin-serve": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^4.2.0",
+    "fast-copy": "^3.0.2",
+    "home-assistant-js-websocket": "^9.5.0",
+    "lit": "^3.3.1",
+    "lit-element": "^4.2.1",
+    "lit-html": "^3.3.1",
+    "memoize-one": "^6.0.0",
+    "parse-duration": "^2.1.4"
+  }
+}

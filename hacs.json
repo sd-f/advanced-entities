@@ -1,0 +1,7 @@
+{
+  "name": "Advanced Entities Row",
+  "content_in_root": false,
+  "render_readme": true,
+  "filename": "advanced-entities-row.js",
+  "homeassistant": "2025.10.0"
+}

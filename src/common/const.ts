@@ -1,0 +1,39 @@
+export const UNAVAILABLE = 'unavailable';
+export const BINARY_STATE_ON = 'on';
+export const BINARY_STATE_OFF = 'off';
+const arrayLiteralIncludes =
+  <T extends readonly unknown[]>(array: T) =>
+  (searchElement: unknown, fromIndex?: number): searchElement is T[number] =>
+    array.includes(searchElement as T[number], fromIndex);
+
+export const UNKNOWN = 'unknown';
+export const ON = 'on';
+export const OFF = 'off';
+
+export const UNAVAILABLE_STATES = [UNAVAILABLE, UNKNOWN] as const;
+export const OFF_STATES = [UNAVAILABLE, UNKNOWN, OFF] as const;
+
+export const isUnavailableState = arrayLiteralIncludes(UNAVAILABLE_STATES);
+export const isOffState = arrayLiteralIncludes(OFF_STATES);
+
+export const DOMAINS_TOGGLE = new Set(['fan', 'input_boolean', 'light', 'switch', 'group', 'automation', 'humidifier']);
+export const DOMAINS_PRESS = new Set(['input_button']);
+
+export const AUTO_COLORS = ['auto', 'auto-no-temperature'];
+
+export const OVERRIDE_CARD_BACKGROUND_COLOR_COLOR_TYPE = ['card', 'label-card'];
+export const OVERRIDE_CARD_BACKGROUND_COLOR_COLORS = ['--ha-card-background', '--card-background-color'];
+
+export const DEFAULT_COLOR = 'var(--primary-text-color)';
+export const DEFAULT_STATE_COLOR = 'var(--state-inactive-color)';
+
+export const DEFAULT_LOCK_ICON = 'mdi:lock-outline';
+export const DEFAULT_UNLOCK_ICON = 'mdi:lock-open-outline';
+export const DEFAULT_LOCK_DURATION = 5;
+
+export const DEFAULT_FAILED_TOAST_MESSAGE = {
+  pin: 'Incorrect PIN, action cancelled',
+  password: 'Incorrect password, action cancelled',
+};
+
+export const NORMALISED_ACTION = 'tap_action';
