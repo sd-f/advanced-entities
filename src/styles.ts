@@ -9,7 +9,7 @@ export const styles = css`
     width: auto;
   }
   .entity {
-    text-align: center;
+    text-align: right;
     cursor: pointer;
   }
   .entity span {
@@ -19,7 +19,7 @@ export const styles = css`
   .entities-row {
     flex-direction: row;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
   .entities-row .entity {

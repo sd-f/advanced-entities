@@ -472,7 +472,7 @@ const styles = i$5 `
     width: auto;
   }
   .entity {
-    text-align: center;
+    text-align: right;
     cursor: pointer;
   }
   .entity span {
@@ -482,7 +482,7 @@ const styles = i$5 `
   .entities-row {
     flex-direction: row;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
   .entities-row .entity {
