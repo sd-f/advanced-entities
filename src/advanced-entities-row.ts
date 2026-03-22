@@ -578,7 +578,7 @@ class AdvancedEntitiesRow extends LitElement {
     }
 
     const modifiedStateObj = { ...stateObj, attributes: { ...stateObj.attributes, unit_of_measurement: unit } };
-    return computeStateDisplay(this._hass!.localize, modifiedStateObj, this._hass!.locale, this._hass!.config, this._hass!.entities, undefined);
+    return computeStateDisplay(this._hass!.localize, modifiedStateObj, this._hass!.locale, this._hass!.config, this._hass!.entities, { show_units: true, units: unit });
   }
 
   // ============================================================================
